@@ -72,7 +72,7 @@ const GET = ref({
                         </p>
                     </div>
                     <transition name="fade">
-                        <div class="mockup-window border border-base-300 bg-gray-200" v-if="GET.showObjects">
+                        <div class="mt-2 mockup-window border border-base-300 bg-gray-200" v-if="GET.showObjects">
                             <div class="flex justify-start px-4 border-t border-base-300">
                                 <pre v-if="pending" class="text-success" data-prefix="$"><code><b>Fetching...</b></code></pre>
                                 <pre v-if="!pending" class="text-black px-6 py-6">{{ projects }}</pre>
