@@ -6,9 +6,16 @@ const props = defineProps([
 </script>
 
 <template>
-    <h1 id="api" class="text-l md:text-xl font-extrabold text-start mt-5">{{ props.title }}</h1>
-    <section class="bg-gray-100 rounded-lg px-6 py-6">
-        <pre>{{ props.route }}</pre>
+    <h1 id="api" class="text-l md:text-xl font-extrabold text-start mt-10 mb-2">{{ props.title }}</h1>
+    <section>
+        <div class="mockup-browser border border-base-300">
+            <div class="mockup-browser-toolbar">
+                <div class="input border border-base-300">https://readcraftapi.vercel.app</div>
+            </div>
+            <div class="flex justify-start border-t border-base-300">
+                <pre>{{ props.route }}</pre>
+            </div>
+        </div>
     </section>
 </template>
 

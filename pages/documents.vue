@@ -54,9 +54,8 @@ async function BookHandler(){
     </section>
 
     <!-- Composables -->
-    <h1 id="api" class="text-l md:text-xl font-extrabold text-start mt-10">Assuming you have a composable using Axios</h1>
-    <section class="bg-gray-100 rounded-lg px-6 py-6">
-        <pre>import axios from "axios";
+    <GetFetchDocument title="Assuming you have a composable using Axios" route="
+    import axios from 'axios';
     export function useApiFetch(){
         return axios.create({
             baseURL: 'http://localhost:8000/',
@@ -65,8 +64,7 @@ async function BookHandler(){
             },
         })
     }
-        </pre>
-    </section>
+    " />
     
     <!-- Get all books -->
     <GetFetchDocument title="Get all books" route="
