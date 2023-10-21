@@ -68,7 +68,7 @@ const GET = ref({
                             GET
                         </button>
                         <p class="px-6 py-2 text-sm font-medium text-gray-900 bg-transparent border border-gray-900 rounded-r-md ">
-                            http://localhost:8000/api/books/${public_id}
+                            https://readcartapi-server.vercel.app/api/books
                         </p>
                     </div>
                     <transition name="fade">
