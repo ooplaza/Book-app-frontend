@@ -20,7 +20,7 @@ const object = {
                 <h1 id="api" class="text-black text-l md:text-xl font-extrabold text-start">How to use it</h1>
                 <p class="text-black font-bold text-start">Base URL</p>
                 <p class="my-2 text-black bg-red-400 hover:text-white border border-gray-200 focus:ring-4 focus:outline-none focus:ring-gray-100 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:focus:ring-gray-600 dark:bg-gray-800 dark:border-gray-700 dark:text-white dark:hover:bg-red-700 mr-2 mb-2">
-                    https://readcartapi-server.vercel.app
+                    https://readcartapi-server.vercel.app/api/books
                 </p>
                 <div class="text-black">
                     These following fields are that can be query from a certain routes.
