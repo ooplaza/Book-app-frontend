@@ -53,13 +53,13 @@ const GET = ref({
     <!-- Initial Docs -->
     <section class="flex items-center justify-center dark:text-gray-400 mt-40">
         <div>
-            <h1 id="api" class="text-l md:text-2xl font-semibold text-center">Can't find any free e-commerce API?!</h1>
+            <h1 id="api" class="text-black text-l md:text-2xl font-semibold text-center">Can't find any free e-commerce API?!</h1>
             <p class="text-s text-black p-2 italic dark:text-gray-400">
                 Well I got you! An ideal RESTful API designed specifically for bookstores, making it an excellent option for assessing the viability of your concept for an e-commerce or online shopping website.
             </p>
 
             <div class="mt-10">
-                <h1 id="ti" class="text-s font-bold">Try it.</h1>
+                <h1 id="ti" class="text-black text-s font-bold">Try it.</h1>
             </div>
             <div class="md:flex md:items-start md:justify-start mt-2">                
                 <div>
@@ -72,7 +72,7 @@ const GET = ref({
                         </p>
                     </div>
                     <transition name="fade">
-                        <div class="mockup-window border border-base-300 bg-base-200 mt-2" v-if="GET.showObjects">
+                        <div class="mockup-window border border-base-300 bg-gray-200" v-if="GET.showObjects">
                             <div class="flex justify-start px-4 border-t border-base-300">
                                 <pre v-if="pending" class="text-success" data-prefix="$"><code><b>Fetching...</b></code></pre>
                                 <pre v-if="!pending" class="text-black px-6 py-6">{{ projects }}</pre>
