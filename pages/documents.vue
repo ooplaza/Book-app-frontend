@@ -37,7 +37,7 @@ async function BookHandler(){
 
 <template>
     <section>
-        <div class="my-10">
+        <div class="my-10 text-black">
             <h1 id="api" class="text-l md:text-xl font-bold text-start">Quick details about the API.</h1>
             <p>The API hosts over 250,000+ books that can be access randomly from the server. The default size limit of the returned objects are paginated into 100 objects per page.</p>
             <hr class="mt-2">
@@ -72,7 +72,7 @@ async function BookHandler(){
     " />
     <Button @click="GET.showObjects = !GET.showObjects && BooksHandler()" ButtonName="Show output" />
     <transition name="fade">
-        <div class="mockup-window border border-base-300 bg-base-200" v-if="GET.showObjects">
+        <div class="mockup-window border border-base-300 bg-gray-200" v-if="GET.showObjects">
             <div class="flex justify-start px-4 border-t border-base-300">
                 <pre v-if="pending" class="text-success" data-prefix="$"><code><b>Fetching...</b></code></pre>
                 <pre v-if="!pending" class="text-black px-6 py-6">{{ projects }}</pre>
