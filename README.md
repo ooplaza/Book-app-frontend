@@ -31,4 +31,4 @@ Fork, branch, make changes, test, and submit a pull request.
 
 MIT License. See [LICENSE](LICENSE).
 
-For questions or issues, reach out to us. Happy coding!
+For questions or issues, reach me out. Happy coding!
