@@ -25,7 +25,7 @@ export default defineNuxtConfig({
 
   colorMode: {
     classSuffix: '',
-    preference: 'dark', // This will set the preference to dark mode
+    preference: 'light', // This will set the default preference to light mode
   },
 
   // For Dark mode
