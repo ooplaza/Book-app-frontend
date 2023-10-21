@@ -1,7 +1,9 @@
 <script setup>
 import { useApiFetch } from "../composables/useApiFetch"
 const projects = ref([])
+const pending = ref(false)
 async function BooksHandler(){
+    pending.value = true
     useApiFetch().get(`api/books/?limit=5&offset=5`).then(response => {
         projects.value = response.data['results']
         console.log(response.data['results'])
@@ -9,6 +11,7 @@ async function BooksHandler(){
         console.log(error)
     }).finally(() => {
         console.log("OK")
+        pending.value = false
     })
 }
 const GET = ref({
@@ -22,9 +25,9 @@ const GET = ref({
         <div class="md:w-3/4 my-auto">
             <div class="">
                 <!-- <p class="font-black pt-15 italic text-black dark:text-gray-400">Free RESTful service</p> -->
-                <div id="NAME" class="font-extrabold text-5xl md:text-8xl antialiased text-black bg-clip-text text-transparent bg-black dark:text-gray-400">
+                <NuxtLink to="/" id="NAME" class="font-extrabold text-5xl md:text-8xl antialiased text-black bg-clip-text text-transparent bg-black dark:text-gray-400">
                     ReadCart<br>API
-                </div>
+                </NuxtLink>
             </div>
             <p class="text-s text-black p-2 italic dark:text-gray-400">
                 A RESTful API tailored for bookstores, making it a great choice for evaluating the feasibility of your e-commerce or online shopping website idea.
@@ -69,9 +72,10 @@ const GET = ref({
                         </p>
                     </div>
                     <transition name="fade">
-                        <div class="mockup-window border border-base-300 mt-5 bg-base-200" v-if="GET.showObjects">
+                        <div class="mockup-window border border-base-300 bg-base-200 mt-2" v-if="GET.showObjects">
                             <div class="flex justify-start px-4 border-t border-base-300">
-                                <pre class="px-6 py-6">{{ projects }}</pre>
+                                <pre v-if="pending" class="text-success" data-prefix="$"><code><b>Fetching...</b></code></pre>
+                                <pre v-if="!pending" class="text-black px-6 py-6">{{ projects }}</pre>
                             </div>
                         </div>
                     </transition>
