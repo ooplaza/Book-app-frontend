@@ -23,7 +23,7 @@ const GET = ref({
             <div class="">
                 <!-- <p class="font-black pt-15 italic text-black dark:text-gray-400">Free RESTful service</p> -->
                 <div id="NAME" class="font-extrabold text-5xl md:text-8xl antialiased text-black bg-clip-text text-transparent bg-black dark:text-gray-400">
-                    Bookshelf<br>API
+                    ReadCart<br>API
                 </div>
             </div>
             <p class="text-s text-black p-2 italic dark:text-gray-400">
@@ -60,7 +60,7 @@ const GET = ref({
             </div>
             <div class="md:flex md:items-start md:justify-start mt-2">                
                 <div>
-                    <div class="ml-2 inline-flex rounded-md shadow-sm my-auto md:my-auto" role="group">
+                    <div class="inline-flex rounded-md shadow-sm my-auto md:my-auto" role="group">
                         <button @click="GET.showObjects = !GET.showObjects && BooksHandler()" type="button" class="px-4 py-2 text-sm font-medium text-gray-900 bg-red-400 border border-gray-900 rounded-l-lg hover:bg-red-300 hover:text-white focus:z-10 focus:ring-2 focus:ring-gray-500 focus:bg-gray-900 focus:text-white dark:border-white dark:text-white dark:hover:text-white dark:hover:bg-gray-700 dark:focus:bg-gray-700">
                             GET
                         </button>
@@ -69,8 +69,10 @@ const GET = ref({
                         </p>
                     </div>
                     <transition name="fade">
-                        <div v-if="GET.showObjects" class="bg-gray-300 rounded-lg my-2">
-                            <pre class="px-6 py-6">{{ projects }}</pre>
+                        <div class="mockup-window border border-base-300 mt-5 bg-base-200" v-if="GET.showObjects">
+                            <div class="flex justify-start px-4 border-t border-base-300">
+                                <pre class="px-6 py-6">{{ projects }}</pre>
+                            </div>
                         </div>
                     </transition>
                 </div>
