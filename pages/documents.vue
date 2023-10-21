@@ -50,7 +50,7 @@ async function BookHandler(){
     import axios from 'axios';
     export function useApiFetch(){
         return axios.create({
-            baseURL: 'http://localhost:8000/',
+            baseURL: 'https://readcartapi-server.vercel.app/',
             headers: {
                 'Content-Type': 'application/json',
             },
@@ -92,7 +92,7 @@ async function BookHandler(){
     })"/>
     <Button @click="GET.showObject = !GET.showObject" ButtonName="Show output" />
     <transition name="fade">
-        <div class="mockup-window border border-base-300 bg-base-200" v-if="GET.showObject">
+        <div class="mockup-window border border-base-300 bg-gray-200" v-if="GET.showObject">
             <div class="flex justify-start px-4 border-t border-base-300">
                 <pre v-if="pending" class="text-success" data-prefix="$"><code><b>Fetching...</b></code></pre>
                 <pre v-if="!pending" class="text-black px-6 py-6">{{ projects[0] }}</pre>
@@ -112,7 +112,7 @@ async function BookHandler(){
     })" />
     <Button @click="GET.customObjects = !GET.customObjects && BookHandler()" ButtonName="Show output" />
     <transition name="fade">
-        <div class="mockup-window border border-base-300 bg-base-200" v-if="GET.customObjects">
+        <div class="mockup-window border border-base-300 bg-gray-200" v-if="GET.customObjects">
             <div class="flex justify-start px-4 border-t border-base-300">
                 <pre v-if="pending" class="text-success" data-prefix="$"><code><b>Fetching...</b></code></pre>
                 <pre v-if="!pending" class="text-black px-6 py-6">{{ project }}</pre>
