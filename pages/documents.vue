@@ -33,6 +33,10 @@ async function BookHandler(){
         pending.value = false
     })
 }
+
+useHead({
+    title: "Documentation"
+})
 </script>
 
 <template>

@@ -17,7 +17,7 @@
                 </div>
                 <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
                 <span id="FOOTER" class="block tracking-wide text-md text-gray-500 sm:text-center dark:text-gray-400">Made with ❤️ by Orly Plaza</span>
-                <NuxtLink to="/about"><span id="FOOTER" class="block pt-2 text-sm sm:text-center dark:text-gray-400"><Icon name="bx:coffee-togo" size="1.5rem" class="text-green-400 mx-1"></Icon>Buy me a coffee</span></NuxtLink>
+                <NuxtLink to="/donate"><span id="FOOTER" class="block pt-2 text-sm sm:text-center dark:text-gray-400"><Icon name="bx:coffee-togo" size="1.5rem" class="text-green-400 mx-1"></Icon>Buy me a coffee</span></NuxtLink>
             </div>
         </footer>
     </div>
